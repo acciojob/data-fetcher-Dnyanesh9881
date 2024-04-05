@@ -19,8 +19,7 @@ const App = () => {
       console.log(error)
           })
   },[])
-
-  return (
+    return (
     <div>
         <div>{
            error ?<p>An error occurred: while fetching data</p> : !data.limit?<pre>No data found</pre>:<div>
