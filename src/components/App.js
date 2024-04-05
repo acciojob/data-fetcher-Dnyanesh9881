@@ -19,10 +19,9 @@ const App = () => {
             // console.log(error)
           })
   },[])
-  // console.log("main", data.limit);
+
   return (
     <div>
-        {/* Do not remove the main div */}
         <div>{
            
            error ?<p>An error occurred: while fetching data</p> : !data.limit?<pre>No data found</pre>:<div>
