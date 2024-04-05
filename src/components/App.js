@@ -7,7 +7,7 @@ const App = () => {
   const [error, setError]=useState(false);
 
   useEffect(()=>{
-    fetch("https://dummyjson.com/products")
+    fetch("https://dummyjson.cm/products")
     .then((res)=>res.json())
     .then((data)=>{
       console.log(data);
@@ -19,12 +19,13 @@ const App = () => {
             // console.log(error)
           })
   },[])
+  // console.log("main", data.limit);
   return (
     <div>
         {/* Do not remove the main div */}
         <div>{
            
-           error ?<p>An error occurred: while fetching data</p> : Object.keys(data).length===0?<pre>No data found</pre>:<div>
+           error ?<p>An error occurred: while fetching data</p> : !data.limit?<pre>No data found</pre>:<div>
            <h1>Data Fetched from API</h1>
            <pre>{JSON.stringify(data, null, 2)}</pre></div> 
           }
