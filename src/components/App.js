@@ -16,9 +16,13 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-        <pre>
-           <pre>{JSON.stringify(data, null, 2)}</pre>
-        </pre>
+        <div>{
+           
+           Object.keys(data).length!==0 ? <div>
+            <h1>Data Fetched From Api</h1>
+            <pre>{JSON.stringify(data, null, 2)}</pre></div> : <p>No data found</p>
+          }
+        </div>
     </div>
   )
 }
