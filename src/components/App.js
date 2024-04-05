@@ -6,19 +6,19 @@ const App = () => {
   const[data, setData]=useState({});
   const [error, setError]=useState(false);
 
-  // useEffect(()=>{
-  //   fetch("https://dummyjson.com/products")
-  //   .then((res)=>res.json())
-  //   .then((data)=>{
-  //     console.log(data);
-  //     setError(false);
-  //     setData({...data})
-  //   })
-  //   .catch((error)=>{
-  //     setError(true);
-  //           // console.log(error)
-  //         })
-  // },[])
+  useEffect(()=>{
+    fetch("https://dummyjson.com/products")
+    .then((res)=>res.json())
+    .then((data)=>{
+      console.log(data);
+      setError(false);
+      setData({...data})
+    })
+    .catch((error)=>{
+      setError(true);
+            // console.log(error)
+          })
+  },[])
   return (
     <div>
         {/* Do not remove the main div */}
