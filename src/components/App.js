@@ -16,14 +16,13 @@ const App = () => {
     })
     .catch((error)=>{
       setError(true);
-            // console.log(error)
+      console.log(error)
           })
   },[])
 
   return (
     <div>
         <div>{
-           
            error ?<p>An error occurred: while fetching data</p> : !data.limit?<pre>No data found</pre>:<div>
            <h1>Data Fetched from API</h1>
            <pre>{JSON.stringify(data, null, 2)}</pre></div> 
