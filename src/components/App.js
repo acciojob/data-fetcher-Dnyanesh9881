@@ -7,7 +7,7 @@ const App = () => {
   const [error, setError]=useState(false);
 
   useEffect(()=>{
-    fetch("https://dummyjson.com/produ")
+    fetch("https://dummyjson.com/products")
     .then((res)=>res.json())
     .then((data)=>{
       console.log(data);
